@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         aa = new ArrayAdapter(this, android.R.layout.simple_list_item_1, module);
         lv.setAdapter(aa);
-
+//ggg
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
