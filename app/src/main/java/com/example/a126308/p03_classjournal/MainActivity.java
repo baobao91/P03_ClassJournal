@@ -4,26 +4,44 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tv347;
-
+    ListView lv;
+    ArrayList<String> module;
+    ArrayAdapter<String> aa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tv347 = (TextView)findViewById(R.id.textView347);
+        lv = (ListView)findViewById(R.id.lvModule);
+        module = new ArrayList<String>();
+        module.add("C347");
 
-        tv347.setOnClickListener(new View.OnClickListener() {
+        aa = new ArrayAdapter(this, android.R.layout.simple_list_item_1, module);
+        lv.setAdapter(aa);
+//ggg
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
-            public void onClick(View v) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selectedHolidays = module.get(position);
+                Intent intent = new Intent( getBaseContext(), Info.class);
+                intent.putExtra("Holidays",selectedHolidays.toString());
 
-                Intent i = new Intent(MainActivity.this, Info.class);
-                startActivity(i);
+//
+
+
+                startActivity(intent);
             }
         });
-    }
+
+    };
 }
