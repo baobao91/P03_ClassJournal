@@ -59,7 +59,7 @@ public class Info extends AppCompatActivity {
         lvCode = (ListView) findViewById(R.id.ListViewCode);
 
         dailyCA = new ArrayList<DailyCA>();
-        
+
 
     }
 }
