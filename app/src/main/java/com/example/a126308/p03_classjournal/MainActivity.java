@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         aa = new ArrayAdapter(this, android.R.layout.simple_list_item_1, module);
         lv.setAdapter(aa);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedHolidays = module.get(position);
