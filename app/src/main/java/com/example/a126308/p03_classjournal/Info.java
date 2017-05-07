@@ -15,7 +15,7 @@ public class Info extends AppCompatActivity {
 
     Button btnInfo, btnEmail, btnAdd;
     ListView lvCode;
-    ArrayList<DailyCA> dailyCA;
+    ArrayList<Module> dailyCA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +56,6 @@ public class Info extends AppCompatActivity {
                         "Choose an Email client :"));
 
             }});
-        lvCode = (ListView) findViewById(R.id.ListViewCode);
-
-        dailyCA = new ArrayList<DailyCA>();
 
 
     }
