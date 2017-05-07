@@ -2,15 +2,20 @@ package com.example.a126308.p03_classjournal;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 public class Info extends AppCompatActivity {
 
     Button btnInfo, btnEmail, btnAdd;
+    ListView lvCode;
+    ArrayList<DailyCA> dailyCA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +56,10 @@ public class Info extends AppCompatActivity {
                         "Choose an Email client :"));
 
             }});
+        lvCode = (ListView) findViewById(R.id.ListViewCode);
+
+        dailyCA = new ArrayList<DailyCA>();
+
 
     }
 }
